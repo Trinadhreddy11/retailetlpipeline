@@ -10,5 +10,7 @@ def run_pipeline():
     df=transform_data(df)
     load_data(df,output_path)
 
-    print(df.head())
+    print(df.info())
+    print(df.shape)
+    
 run_pipeline()
