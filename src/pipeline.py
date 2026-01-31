@@ -10,5 +10,5 @@ def run_pipeline():
     df=transform_data(df)
     load_data(df,output_path)
 
-    print(df.info())
+    print(df.head())
 run_pipeline()
