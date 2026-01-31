@@ -1,6 +1,7 @@
 from extract import extract_data
 from transform import transform_data
 from load import load_data
+from view_data import view_and_convert_data
 
 def run_pipeline():
     raw_path=r"C:\Users\TRINADH PIDAPARTHI\OneDrive\Desktop\retail etl pipeline\data\raw\data.csv"
@@ -9,8 +10,8 @@ def run_pipeline():
     df=extract_data(raw_path)
     df=transform_data(df)
     load_data(df,output_path)
-
-    print(df.info())
-    print(df.shape)
+    print("ETL pipeline completed")
     
+    view_and_convert_data()
+
 run_pipeline()
